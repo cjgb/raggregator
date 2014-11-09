@@ -93,6 +93,7 @@ urls =  [
             'http://atejada.blogspot.com/feeds/posts/default?alt=rss',                  # alvaro tejada
             'http://negociness.blogspot.com/feeds/posts/default',                       # otto wagner
             'http://ecologicaconciencia.wordpress.com/feed/',                       	# lola ferrer castán
+            'http://www.dataprix.com/taxonomy/term/2598/all/feed',                      # juan vidal gil
             'http://computandocienciapolitica.blogspot.com/feeds/posts/default',        # fede .c
             'http://estadisticadeaaz.blogspot.com/feeds/posts/default?alt=rss',         # Gigi Voinea
             'http://xrazonesparay.wordpress.com/feed/',                                 # inés garmendia
