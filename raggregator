@@ -1,0 +1,9 @@
+#!/bin/bash
+
+su - carlos -c /home/carlos/bin/raggregator.py
+
+destdir=/var/www/datanalytics
+
+mv /tmp/r_blogs_mashup.rss /tmp/r_blogs_mashup.php $destdir
+
+chown www-data:www-data $destdir/r_blogs_mashup.*
