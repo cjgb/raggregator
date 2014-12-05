@@ -95,6 +95,7 @@ urls =  [
             'http://ecologicaconciencia.wordpress.com/feed/',                       	# lola ferrer castán
             'http://www.dataprix.com/taxonomy/term/2598/all/feed',                      # juan vidal gil
             'http://computandocienciapolitica.blogspot.com/feeds/posts/default',        # fede .c
+            'http://sevillarusers.wordpress.com/feed/',                                 # grupo de usuarios de R de Sevilla   
             'http://estadisticadeaaz.blogspot.com/feeds/posts/default?alt=rss',         # Gigi Voinea
             'http://xrazonesparay.wordpress.com/feed/',                                 # inés garmendia
             'http://luiscayuela.blogspot.com/feeds/posts/default'                       # luis cayuela
