@@ -115,7 +115,7 @@ for feed in feeds:
 entries.sort( reverse = True )
 entries = [ entry for (date,entry) in entries ]
 
-create_html( entries )                                  # Creo el fichero de html
+#create_html( entries )                                  # Creo el fichero de html
 
 entries_out = []
 for entry in entries:
@@ -128,7 +128,7 @@ for entry in entries:
 
 rss = PyRSS2Gen.RSS2(
     title = "Noticias de R en español",
-    link = "http://www.datanalytics.com/r_blogs_mashup.html",
+    link = "http://www.datanalytics.com/2010/06/03/agregador-de-noticias-sobre-r-en-espanol/",
     description = "Agregación de noticias sobre R en español",
     lastBuildDate = datetime.datetime.now(),
     items = entries_out
