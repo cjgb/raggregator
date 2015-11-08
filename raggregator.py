@@ -11,7 +11,7 @@ from BeautifulSoup import BeautifulSoup
 
 from urllib import urlopen
 
-def download( url ):
+def download(url):
     try:
         feed = feedparser.parse( urlopen( url ) )
     except:
@@ -31,7 +31,7 @@ def process_description( text ):
     return p[0:300] + '[...]'
 
 
-def is_too_old( post_parsed_date ):
+def is_too_old(post_parsed_date):
     post_date = datetime.datetime( *post_parsed_date[:6] )
     return (right_now - post_date).days > 60
 
@@ -45,6 +45,14 @@ def when_post( post_parsed_date ):
         return "Ayer"
     return "Hace " + str(days) + u" días"
 
+
+def get_date(entry):
+    if entry.has_key("date"):
+        return(entry["date"])
+    elif entry.has_key("published"):
+        return(entry["published"])
+    else:
+        return("unknown")
 
 def create_html( entries ):
     f_html = open( '/tmp/r_blogs_mashup.php', 'w' )
@@ -110,8 +118,17 @@ feeds = filter( lambda x: not x is None, feeds )
 entries = []
 for feed in feeds:
     for entry in feed[ "items" ]:
-        if entry.has_key( 'tags' ) and any( [ tag['term'] in r_tags for tag in entry['tags'] ] ) and not is_too_old( entry['date_parsed' ] ):
-            entries.append( ( entry[ 'date_parsed' ], entry ) )
+        if entry.has_key( 'tags' ) and any( [ tag['term'] in r_tags for tag in entry['tags'] ] ):
+            if entry.has_key("date_parsed"):
+                post_parsed_date = entry["date_parsed"]
+            elif entry.has_key("updated_parsed"):
+                post_parsed_date = entry["updated_parsed"]
+            elif entry.has_key("published_parsed"):
+                post_parsed_date = entry["published_parsed"]
+            else:
+                continue
+            if not is_too_old(post_parsed_date):
+                entries.append((post_parsed_date, entry)) 
 
 entries.sort( reverse = True )
 entries = [ entry for (date,entry) in entries ]
@@ -125,7 +142,7 @@ for entry in entries:
                     link        = entry['link'], 
                     guid        = entry['link'], 
                     description = process_description( entry['description'] ), 
-                    pubDate     = entry['date']  ) )
+                    pubDate     = get_date(entry)))
 
 rss = PyRSS2Gen.RSS2(
     title = "Noticias de R en español",
