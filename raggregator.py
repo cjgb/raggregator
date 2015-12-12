@@ -85,7 +85,7 @@ urls =  [
             'http://acercad.wordpress.com/feed/',                                       # Jaume Tormo
             'http://feeds.feedburner.com/Geomarketing',                                 # GMK
             'http://rprojectsp.blogspot.com/feeds/posts/default',                       # Bebilda
-            'http://predictive.wordpress.com/feed/',                                    # Apuntes de estad'istica
+            #'http://predictive.wordpress.com/feed/',                                    # Apuntes de estad'istica
             'http://erre-que-erre-paco.blogspot.com/feeds/posts/default?alt=rss',       # erreros
             'http://feeds.feedburner.com/analisis-comunicacion-datos-cuantitativos',    # gibaja
             'http://www.grserrano.es/wp/feed/',                                         # serrano
