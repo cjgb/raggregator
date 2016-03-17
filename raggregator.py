@@ -106,6 +106,7 @@ urls =  [
             'http://sevillarusers.wordpress.com/feed/',                                 # grupo de usuarios de R de Sevilla   
             'http://estadisticadeaaz.blogspot.com/feeds/posts/default?alt=rss',         # Gigi Voinea
             'http://xrazonesparay.wordpress.com/feed/',                                 # inés garmendia
+            'https://pedroconcejero.wordpress.com/feed/',                               # pedro concejero
             'http://bipostit.com/feed/', 		                                # 
             'http://luiscayuela.blogspot.com/feeds/posts/default'                       # luis cayuela
         ]
