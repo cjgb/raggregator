@@ -1,15 +1,14 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 # -*- coding: utf-8 -*-
 
 from feedparser import parse
-import datetime import datetime
+from datetime import datetime
 import PyRSS2Gen
 import sys
 import re
 import time
 from bs4 import BeautifulSoup
-
-from urllib import urlopen
+from urllib.request import urlopen
 
 def download(url):
     try:
@@ -21,7 +20,7 @@ def download(url):
 
 
 def process_description( text ):
-    text_parts = BeautifulSoup(text).findAll(text=True)
+    text_parts = BeautifulSoup(text, "lxml").findAll(text=True)
     p = ''.join(text_parts)
     if(len(p) < 500):
         return(p)
@@ -54,7 +53,12 @@ def get_date(entry):
 
 right_now = datetime(*time.localtime()[:6])
 
-urls =  []
+urls =  ["https://rugbcn.wordpress.com/feed/", 
+         "http://madrid.r-es.org/feed/",
+         "https://sevillarusers.wordpress.com/feed/",
+         "https://almeriarusers.wordpress.com/feed/",
+         "https://valenciarusers.wordpress.com/feed/",
+         "https://www.r-users.gal/noticias.xml"]
 
 feeds = [download(url) for url in urls]
 feeds = [x for x in feeds if x is not None]
@@ -87,12 +91,12 @@ for entry in entries:
                     pubDate     = get_date(entry)))
 
 rss = PyRSS2Gen.RSS2(
-    title = "Noticias de R en español",
-    link = "http://www.datanalytics.com/2010/06/03/agregador-de-noticias-sobre-r-en-espanol/",
-    description = "Agregación de noticias sobre R en español",
-    lastBuildDate = datetime.datetime.now(),
+    title = "Noticias de los grupos locales de usuarios de R en España",
+    link = "http://r-es.org/grupos-locales/",
+    description = "Noticias de los grupos locales de usuarios de R en España",
+    lastBuildDate = datetime.now(),
     items = entries_out
  )
 
-rss.write_xml(open("/tmp/r_blogs_mashup.rss", "w"), encoding = "utf-8")
+rss.write_xml(open("/tmp/r_groups_spain.rss", "w"), encoding = "utf-8")
 
