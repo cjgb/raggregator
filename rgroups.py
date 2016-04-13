@@ -58,6 +58,7 @@ urls =  ["https://rugbcn.wordpress.com/feed/",
          "https://sevillarusers.wordpress.com/feed/",
          "https://almeriarusers.wordpress.com/feed/",
          "https://valenciarusers.wordpress.com/feed/",
+         "https://ralamanca.wordpress.com/feed/",
          "https://www.r-users.gal/noticias.xml"]
 
 feeds = [download(url) for url in urls]
