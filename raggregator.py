@@ -96,7 +96,7 @@ urls =  [
             #'http://predictive.wordpress.com/feed/',                                    # Apuntes de estad'istica
             'http://erre-que-erre-paco.blogspot.com/feeds/posts/default?alt=rss',       # erreros
             'http://feeds.feedburner.com/analisis-comunicacion-datos-cuantitativos',    # gibaja
-            'http://www.grserrano.es/wp/feed/',                                         # serrano
+            #'http://www.grserrano.es/wp/feed/',                                         # serrano
             'http://procomun.wordpress.com/feed/',                                      # oscar perpignan
             'http://atejada.blogspot.com/feeds/posts/default?alt=rss',                  # alvaro tejada
             'http://negociness.blogspot.com/feeds/posts/default',                       # otto wagner
