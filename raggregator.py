@@ -7,13 +7,15 @@ import PyRSS2Gen
 import sys
 import re
 import time
+import urllib2
+
 from BeautifulSoup import BeautifulSoup
 
-from urllib import urlopen
-
 def download(url):
+    opener = urllib2.build_opener()
+    opener.addheaders = [('User-Agent', 'Mozilla/5.0 (Windows NT 5.1; rv:10.0.1) Gecko/20100101 Firefox/10.0.1')]
     try:
-        feed = feedparser.parse( urlopen( url ) )
+        feed = feedparser.parse(opener.open(url))
     except:
         sys.stderr.write( 'Error reading url ' + url + '\n' )
         #sys.exit( 127 )
@@ -88,7 +90,7 @@ urls =  [
             'https://www.blogger.com/feeds/1685427845194108708/posts/default',          # ibarra chile
             'http://i314.com.ar/?feed=atom',                                            # i314 argentina
             'http://statisticalecology.blogspot.com/feeds/posts/default',               # ecolog'ia estad'istica
-            'http://www.datanalytics.com/blog/feed',                                    # m'io
+            'http://www.datanalytics.com/feed',                                         # m'io
             'http://analisisydecision.es/feed/',                                        # rvaquerizo
             'http://acercad.wordpress.com/feed/',                                       # Jaume Tormo
             'http://feeds.feedburner.com/Geomarketing',                                 # GMK
