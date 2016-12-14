@@ -19,7 +19,7 @@ urls =  [
             'http://feeds.feedburner.com/analisis-comunicacion-datos-cuantitativos',    # gibaja
             'http://procomun.wordpress.com/feed/',                                      # oscar perpignan
             'http://atejada.blogspot.com/feeds/posts/default?alt=rss',                  # alvaro tejada
-            'http://negociness.blogspot.com/feeds/posts/default',                       # otto wagner
+            #'http://negociness.blogspot.com/feeds/posts/default',                       # otto wagner
             'http://ecologicaconciencia.wordpress.com/feed/',                       	# lola ferrer castán
             'http://www.dataprix.com/taxonomy/term/2598/all/feed',                      # juan vidal gil
             'http://computandocienciapolitica.blogspot.com/feeds/posts/default',        # fede .c
