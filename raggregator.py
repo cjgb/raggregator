@@ -6,6 +6,7 @@ from auxfuns import process_entries
 urls =  [
             #'http://rchibchombia.blogspot.com/feeds/posts/default',                     # r chibchombia
             'http://emilopezcano.blogspot.com/feeds/posts/default',                     # emilio lopez cano
+            'https://muestrear-no-es-pecado.netlify.com/post/index.xml',                # joscani
             'https://www.blogger.com/feeds/1685427845194108708/posts/default',          # ibarra chile
             #'http://i314.com.ar/?feed=atom',                                            # i314 argentina
             'http://statisticalecology.blogspot.com/feeds/posts/default',               # ecolog'ia estad'istica
