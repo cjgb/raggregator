@@ -4,10 +4,10 @@
 from auxfuns import process_entries
 
 urls =  [
-            'http://rchibchombia.blogspot.com/feeds/posts/default',                     # r chibchombia
+            #'http://rchibchombia.blogspot.com/feeds/posts/default',                     # r chibchombia
             'http://emilopezcano.blogspot.com/feeds/posts/default',                     # emilio lopez cano
             'https://www.blogger.com/feeds/1685427845194108708/posts/default',          # ibarra chile
-            'http://i314.com.ar/?feed=atom',                                            # i314 argentina
+            #'http://i314.com.ar/?feed=atom',                                            # i314 argentina
             'http://statisticalecology.blogspot.com/feeds/posts/default',               # ecolog'ia estad'istica
             'http://www.datanalytics.com/feed',                                         # m'io
             'http://analisisydecision.es/feed/',                                        # rvaquerizo
@@ -21,13 +21,13 @@ urls =  [
             'http://atejada.blogspot.com/feeds/posts/default?alt=rss',                  # alvaro tejada
             #'http://negociness.blogspot.com/feeds/posts/default',                       # otto wagner
             'http://ecologicaconciencia.wordpress.com/feed/',                       	# lola ferrer castán
-            'http://www.dataprix.com/taxonomy/term/2598/all/feed',                      # juan vidal gil
+            #'http://www.dataprix.com/taxonomy/term/2598/all/feed',                      # juan vidal gil
             'http://computandocienciapolitica.blogspot.com/feeds/posts/default',        # fede .c
             'http://sevillarusers.wordpress.com/feed/',                                 # grupo de usuarios de R de Sevilla
             'http://estadisticadeaaz.blogspot.com/feeds/posts/default?alt=rss',         # Gigi Voinea
             'http://xrazonesparay.wordpress.com/feed/',                                 # inés garmendia
             'https://pedroconcejero.wordpress.com/feed/',                               # pedro concejero
-            'https://medium.com/feed/kschool-data-scientists',                          # Kschool ciencia de datos (1a edicion)
+            #'https://medium.com/feed/kschool-data-scientists',                          # Kschool ciencia de datos (1a edicion)
             'http://bipostit.com/feed/', 		                                #
             'http://luiscayuela.blogspot.com/feeds/posts/default'                       # luis cayuela
         ]

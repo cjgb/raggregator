@@ -41,8 +41,8 @@ def process_entries(urls, r_tags, rss_metadata, output_file):
 
     right_now = datetime.datetime( *time.localtime()[:6] )
 
-    feeds = [download( url ) for url in urls]
-    feeds = filter( lambda x: not x is None, feeds )
+    feeds = [download(url) for url in urls]
+    feeds = filter(lambda x: not x is None, feeds)
 
     entries = []
     for feed in feeds:
