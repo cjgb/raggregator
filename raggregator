@@ -1,7 +1,7 @@
 #!/bin/bash
 
-su - carlos -c /home/carlos/bin/raggregator.py
-su - carlos -c /home/carlos/bin/rgroups.py
+su - carlos -c /home/carlos/raggregator/raggregator.py
+su - carlos -c /home/carlos/raggregator/rgroups.py
 
 destdir=/var/www/datanalytics
 
