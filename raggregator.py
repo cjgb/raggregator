@@ -1,4 +1,4 @@
-#!/usr/bin/python2
+#!/usr/bin/python3
 # -*- coding: utf-8 -*-
 
 from auxfuns import process_entries
@@ -47,5 +47,3 @@ rss_metadata = {
 output_file = "/tmp/r_blogs_mashup.rss"
 
 process_entries(urls, r_tags, rss_metadata, output_file)
-
-
