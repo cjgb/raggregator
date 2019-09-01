@@ -1,13 +1,15 @@
 import feedparser
 import sys
-import urllib2
+#import urllib2
+import urllib.request, urllib.error, urllib.parse
 import datetime
 import PyRSS2Gen
 import time
-from BeautifulSoup import BeautifulSoup
+from bs4 import BeautifulSoup
 
 def download(url):
-    opener = urllib2.build_opener()
+    #opener = urllib2.build_opener()
+    opener = urllib.request.build_opener()
     opener.addheaders = [('User-Agent', 'Mozilla/5.0 (Windows NT 5.1; rv:10.0.1) Gecko/20100101 Firefox/10.0.1')]
     try:
         feed = feedparser.parse(opener.open(url, timeout = 10))
@@ -18,7 +20,7 @@ def download(url):
     return feed
 
 def process_description( text ):
-    soup = BeautifulSoup(text)
+    soup = BeautifulSoup(text, features="html.parser")
     text_parts = soup.findAll(text=True)
     p = ''.join(text_parts)
     if( len( p ) < 500 ):
@@ -30,9 +32,9 @@ def is_too_old(post_parsed_date, right_now):
     return (right_now - post_date).days > 60
 
 def get_date(entry):
-    if entry.has_key("date"):
+    if "date" in entry:
         return(entry["date"])
-    elif entry.has_key("published"):
+    elif "published" in entry:
         return(entry["published"])
     else:
         return("unknown")
@@ -42,16 +44,16 @@ def process_entries(urls, r_tags, rss_metadata, output_file):
     right_now = datetime.datetime( *time.localtime()[:6] )
 
     feeds = [download(url) for url in urls]
-    feeds = filter(lambda x: not x is None, feeds)
+    feeds = [x for x in feeds if not x is None]
 
     entries = []
     for feed in feeds:
         for entry in feed[ "items" ]:
-            if entry.has_key("date_parsed"):
+            if "date_parsed" in entry:
                 post_parsed_date = entry["date_parsed"]
-            elif entry.has_key("updated_parsed"):
+            elif "updated_parsed" in entry:
                 post_parsed_date = entry["updated_parsed"]
-            elif entry.has_key("published_parsed"):
+            elif "published_parsed" in entry:
                 post_parsed_date = entry["published_parsed"]
             else:
                 continue
@@ -86,4 +88,3 @@ def process_entries(urls, r_tags, rss_metadata, output_file):
      )
 
     rss.write_xml(open(output_file, "w"), encoding = "utf-8")
-

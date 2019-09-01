@@ -1,0 +1,5 @@
+[packages]
+
+feedparser = "*"
+PyRSS2Gen = "*"
+BeautifulSoup4 = "*"

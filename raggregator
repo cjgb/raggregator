@@ -4,7 +4,6 @@ su - carlos -c /home/carlos/bin/raggregator.py
 su - carlos -c /home/carlos/bin/rgroups.py
 
 destdir=/var/www/datanalytics
-#mv /tmp/r_blogs_mashup.rss /tmp/r_blogs_mashup.php $destdir
 
 mv /tmp/r_blogs_mashup.rss $destdir
 chown www-data:www-data $destdir/r_blogs_mashup.rss
