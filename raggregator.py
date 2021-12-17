@@ -32,7 +32,7 @@ urls =  [
             'http://xrazonesparay.wordpress.com/feed/',                                 # inés garmendia
             'https://pedroconcejero.wordpress.com/feed/',                               # pedro concejero
             #'https://medium.com/feed/kschool-data-scientists',                          # Kschool ciencia de datos (1a edicion)
-            'http://bipostit.com/feed/', 		                                #
+            #'http://bipostit.com/feed/', 		                                #
             'http://luiscayuela.blogspot.com/feeds/posts/default'                       # luis cayuela
         ]
 

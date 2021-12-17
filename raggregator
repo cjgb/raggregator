@@ -3,10 +3,10 @@
 su - carlos -c /home/carlos/raggregator/raggregator.py
 su - carlos -c /home/carlos/raggregator/rgroups.py
 
-destdir=/var/www/datanalytics
+destdir=/var/www/datanalytics_01
 
 mv /tmp/r_blogs_mashup.rss $destdir
-chown www-data:www-data $destdir/r_blogs_mashup.rss
+#chown www-data:www-data $destdir/r_blogs_mashup.rss
 
 mv /tmp/r_groups_spain.rss $destdir
-chown www-data:www-data $destdir/r_groups_spain.rss
+#chown www-data:www-data $destdir/r_groups_spain.rss
