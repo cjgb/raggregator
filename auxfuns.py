@@ -66,7 +66,7 @@ def process_entries(urls, r_tags, rss_metadata, output_file):
             if not is_too_old(post_parsed_date, right_now):
                 entries.append((post_parsed_date, entry))
 
-    entries.sort( reverse = True )
+    entries.sort(reverse = True, key=lambda x: x[0])
     entries = [ entry for (date,entry) in entries ]
 
 
