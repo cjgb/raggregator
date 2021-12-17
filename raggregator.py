@@ -13,7 +13,7 @@ urls =  [
             'https://www.blogger.com/feeds/1685427845194108708/posts/default',          # ibarra chile
             #'http://i314.com.ar/?feed=atom',                                            # i314 argentina
             'http://statisticalecology.blogspot.com/feeds/posts/default',               # ecolog'ia estad'istica
-            'http://www.datanalytics.com/feed',                                         # m'io
+            'http://www.datanalytics.com/index.xml',                                    # m'io
             'http://analisisydecision.es/feed/',                                        # rvaquerizo
             'http://acercad.wordpress.com/feed/',                                       # Jaume Tormo
             'http://feeds.feedburner.com/Geomarketing',                                 # GMK
