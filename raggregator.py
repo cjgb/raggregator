@@ -4,6 +4,7 @@
 from auxfuns import process_entries
 
 urls =  [
+            'https://elartedeldato.com/index.xml',                     # paula lópez casado
             #'http://rchibchombia.blogspot.com/feeds/posts/default',                     # r chibchombia
             'https://becarioprecario.github.io/feed.xml',                               # virgilio gómez rubio
             'https://solmos.netlify.com/es/index.xml',                                  # sergio olmos
