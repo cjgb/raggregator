@@ -2,7 +2,7 @@
 
 cd /home/carlos/gits/raggregator
 
-pipenv run raggregator.py
+pipenv run python raggregator.py
 
 #su - carlos -c /home/carlos/raggregator/raggregator.py
 #su - carlos -c /home/carlos/raggregator/rgroups.py
