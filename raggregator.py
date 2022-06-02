@@ -16,7 +16,7 @@ urls =  [
             #'http://i314.com.ar/?feed=atom',                                            # i314 argentina
             'http://statisticalecology.blogspot.com/feeds/posts/default',               # ecolog'ia estad'istica
             'http://www.datanalytics.com/index.xml',                                    # m'io
-            'http://analisisydecision.es/feed/',                                        # rvaquerizo
+            'https://analisisydecision.es/feed/',                                        # rvaquerizo
             'http://acercad.wordpress.com/feed/',                                       # Jaume Tormo
             'http://feeds.feedburner.com/Geomarketing',                                 # GMK
             'http://rprojectsp.blogspot.com/feeds/posts/default',                       # Bebilda
