@@ -5,7 +5,7 @@
 #su - carlos -c /home/carlos/raggregator/raggregator.py
 #su - carlos -c /home/carlos/raggregator/rgroups.py
 
-destdir=/var/www/datanalytics_01
+destdir=/var/www/datanalytics_01/public
 
 mv /tmp/r_blogs_mashup.rss $destdir
 #chown www-data:www-data $destdir/r_blogs_mashup.rss
