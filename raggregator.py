@@ -5,6 +5,7 @@ from auxfuns import process_entries
 
 urls =  [
             'https://elartedeldato.com/index.xml',                     # paula lópez casado
+            'https://hagutierrezro.home.blog/feed/', # andrés gutiérrez
             #'http://rchibchombia.blogspot.com/feeds/posts/default',                     # r chibchombia
             'https://becarioprecario.github.io/feed.xml',                               # virgilio gómez rubio
             'https://solmos.netlify.com/es/index.xml',                                  # sergio olmos
@@ -34,7 +35,16 @@ urls =  [
             'https://pedroconcejero.wordpress.com/feed/',                               # pedro concejero
             #'https://medium.com/feed/kschool-data-scientists',                          # Kschool ciencia de datos (1a edicion)
             #'http://bipostit.com/feed/', 		                                #
-            'http://luiscayuela.blogspot.com/feeds/posts/default'                       # luis cayuela
+            'http://luiscayuela.blogspot.com/feeds/posts/default',                       # luis cayuela
+
+            # grupos locales de R
+            "https://rugbcn.wordpress.com/feed/",
+            "http://madrid.r-es.org/feed/",
+            "https://sevillarusers.wordpress.com/feed/",
+            "https://almeriarusers.wordpress.com/feed/",
+            "https://valenciarusers.wordpress.com/feed/",
+            "https://ralamanca.wordpress.com/feed/",
+            "https://www.r-users.gal/noticias.xml"
         ]
 
 r_tags = [ 'r', u'r', 'R', u'C\xf3digo en R', u'R-castellano', 'R Tips', u'R' ]
