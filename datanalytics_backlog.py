@@ -32,7 +32,7 @@ my_new_entry = random.choice(all_links)
 # get entry elements
 
 req = urllib.request.Request(my_new_entry)
-soup = BeautifulSoup(urllib.request.urlopen(req).read().decode("utf-8"))
+soup = BeautifulSoup(urllib.request.urlopen(req).read().decode("utf-8"), 'html.parser')
 
 title       = soup.findAll(attrs={"property": "og:title"})[0]['content']
 description = soup.findAll(attrs={"property": "og:description"})[0]['content']
