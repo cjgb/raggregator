@@ -1,0 +1,13 @@
+#!/bin/bash
+
+cd /home/carlos/gits/raggregator
+
+pipenv run python datanalytics_backlog.py
+
+destdir=/var/www/datanalytics_01/public
+
+mv /tmp/random_old_post.rss $destdir
+#chown www-data:www-data $destdir/r_blogs_mashup.rss
+
+#mv /tmp/r_groups_spain.rss $destdir
+#chown www-data:www-data $destdir/r_groups_spain.rss
