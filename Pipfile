@@ -1,5 +1,6 @@
 [packages]
-
 feedparser = "*"
 PyRSS2Gen = "*"
 BeautifulSoup4 = "*"
+requests = "*"
+lxml = "*"

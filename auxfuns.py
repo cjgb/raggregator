@@ -1,6 +1,5 @@
 import feedparser
 import sys
-#import urllib2
 import urllib.request, urllib.error, urllib.parse
 import datetime
 import PyRSS2Gen
@@ -8,18 +7,17 @@ import time
 from bs4 import BeautifulSoup
 
 def download(url):
-    #opener = urllib2.build_opener()
     opener = urllib.request.build_opener()
-    opener.addheaders = [('User-Agent', 'Mozilla/5.0 (Windows NT 5.1; rv:10.0.1) Gecko/20100101 Firefox/10.0.1')]
+    opener.addheaders = [('User-Agent', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36')]
     try:
-        feed = feedparser.parse(opener.open(url, timeout = 10))
+        feed = feedparser.parse(opener.open(url, timeout = 10).read().decode("utf-8"))
     except:
-        sys.stderr.write( 'Error reading url ' + url + '\n' )
+        sys.stderr.write('Error reading url ' + url + '\n')
         #sys.exit( 127 )
         feed = None
     return feed
 
-def process_description( text ):
+def process_description(text):
     soup = BeautifulSoup(text, features="html.parser")
     text_parts = soup.findAll(text=True)
     p = ''.join(text_parts)

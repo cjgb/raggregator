@@ -51,7 +51,7 @@ r_tags = [ 'r', u'r', 'R', u'C\xf3digo en R', u'R-castellano', 'R Tips', u'R' ]
 
 rss_metadata = {
     'title'       : "Noticias de R en español",
-    'link'        :  "http://www.datanalytics.com/2010/06/03/agregador-de-noticias-sobre-r-en-espanol/",
+    'link'        : "http://www.datanalytics.com/2010/06/03/agregador-de-noticias-sobre-r-en-espanol/",
     'description' : "Agregación de noticias sobre R en español"
 }
 
